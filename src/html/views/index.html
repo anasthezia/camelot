@@ -1,0 +1,53 @@
+<% var data = {
+    title: "Заголовок | Проект",
+    author: "Harrix",
+    uses: [
+        {
+            title: 'Оконный профиль', 
+            imageUrl: 'page-1_img01.jpg' 
+        },
+        {
+            title: 'ПВХ изделия', 
+            imageUrl: 'page-1_img02.jpg' 
+        },
+        {
+            title: 'Лакокрасочные изделия', 
+            imageUrl: 'page-1_img07.jpg' 
+        },
+        {
+            title: 'Бумага', 
+            imageUrl: 'page-1_img08.jpg' 
+        },
+        {
+            title: 'Герметики', 
+            imageUrl: 'page-1_img10.jpg' 
+        },
+        {
+            title: 'Компаунды', 
+            imageUrl: 'page-1_img12.jpg' 
+        }, 
+    ], 
+    points: [
+        {
+            title: 'Отгружено тонн',
+            value: '346'
+        },
+        {
+            title: 'Отгружено тонн',
+            value: '21'
+        },
+        {
+            title: 'Отгружено тонн',
+            value: '36'
+        },
+    ]
+  }; %>
+  <%= _.template(require('./../includes/header.html'))(data) %>
+  
+  <div class="container">
+    Первая страница.
+  </div>
+  <%= _.template(require('./../includes/uses-list.html'))(data) %>
+  <%= _.template(require('./../includes/points.html'))(data) %>
+
+  <%= _.template(require('./../includes/footer.html'))(data) %>

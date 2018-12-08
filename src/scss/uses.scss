@@ -1,0 +1,29 @@
+.uses {
+    list-style: none;
+}
+
+.uses-item{
+    margin-bottom: 40px;
+    overflow: hidden;
+    position: relative;
+
+    &__title {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        color: white;
+        text-transform: uppercase;
+        font-weight: bold;
+        padding: 10px 40px;
+        z-index: 2;
+    }
+    &__image {
+        overflow: hidden;
+    }
+    &__image img {
+        transition: all .5s;
+    }
+    &:hover &__image img {
+        transform: scale(1.1)
+    }
+}

@@ -1,0 +1,13 @@
+<div class="row">
+        <% points.forEach(function(item) { %>
+
+    <div class="col-md-4">
+        <article class="point">
+        <div class="point__wrap">
+            <div class="counter"><%-item.value%></div>
+        </div>
+        <p class="point__title"><%-item.title%></p>
+        </article>
+    </div>
+    <% }); %>  
+</div>
