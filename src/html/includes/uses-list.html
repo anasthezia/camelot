@@ -3,12 +3,18 @@
         <% uses.forEach(function(item) { %>
         <li class="col-md-4">
             <div class="uses-item">
-                <div class="uses-item__title">
-                    <%-item.title%>
-                </div>
                 <div class="uses-item__image">
                     <img src='./img/<%-item.imageUrl%>'  alt="">
                 </div>
+                <div class="uses-item__text">
+                    <div class="uses-item__title">
+                        <%-item.title%>
+                    </div>
+                    <div class="uses-item__description">
+                        <%-item.description%>
+                    </div>
+                </div>
+
             </div>
         </li>
         <% }); %>  
