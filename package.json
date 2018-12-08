@@ -4,13 +4,8 @@
   "description": "",
   "private": true,
   "scripts": {
-    "dev": "webpack --mode development",
-    "build-only": "webpack --mode production",
-    "build": "del-cli dist && webpack --mode production && html dist/*.html --indent-size 2",
-    "watch": "webpack --mode development --watch",
-    "start": "webpack-dev-server --mode development --open",
-    "beautify": "html dist/*.html --indent-size 2",
-    "clear": "del-cli dist"
+    "dev": "NODE_ENV=development webpack-dev-server --hot",
+    "prod": "NODE_ENV=production webpack -p"
   },
   "author": "",
   "license": "ISC",

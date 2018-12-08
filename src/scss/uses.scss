@@ -1,3 +1,5 @@
+@import "vars.scss";
+
 .uses {
     list-style: none;
 }
@@ -9,19 +11,33 @@
 
     &__title {
         position: absolute;
-        width: 100%;
         bottom: 0;
-        color: white;
+        color: #fff;
         text-transform: uppercase;
-        font-weight: bold;
-        padding: 10px 40px;
+        font-weight: 700;
+        padding: 10px 40px 40px 48px;
         z-index: 2;
+        left: 0px;
+        right: 0px;
+        bottom: 0;
+        background: linear-gradient(transparent, #00000080 20%, #000000ab 100%);
+        &:before {
+            content: '';
+            position: absolute;
+            height: 40px;
+            width: 3px;
+            top: 0;
+            left: 32px;
+            background: $blue;
+        }
     }
     &__image {
         overflow: hidden;
     }
     &__image img {
         transition: all .5s;
+        width: 100%;
+
     }
     &:hover &__image img {
         transform: scale(1.1)
