@@ -21,14 +21,18 @@ function generateHtmlPlugins(templateDir) {
 const htmlPlugins = generateHtmlPlugins('./src/html/views');
 
 module.exports = {
+  mode: 'development',
   entry: [
     './src/js/index.js',
     './src/scss/style.scss'
   ],
+  devtool: "inline-source-map",
+  devServer: {
+    contentBase: './dist'
+  },
   output: {
     filename: './js/bundle.js'
   },
-  devtool: "source-map",
   module: {
     rules: [{
         test: /\.js$/,

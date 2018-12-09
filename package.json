@@ -4,8 +4,9 @@
   "description": "",
   "private": true,
   "scripts": {
-    "dev": "NODE_ENV=development webpack-dev-server --hot",
-    "prod": "NODE_ENV=production webpack -p"
+    "watch": "webpack --watch",
+    "start": "webpack-dev-server",
+    "build": "webpack"
   },
   "author": "",
   "license": "ISC",
