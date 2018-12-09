@@ -1,6 +1,18 @@
 <% var data = {
     title: "Заголовок | Проект",
     author: "Harrix",
+    products: [
+        {
+            title: 'Оконный профиль', 
+            description: 'При производстве стекла карбонатный наполнитель добавляют в шихту для: повышения температуры плавления шихты, снижая затраты на енергоносители; улучшения качества зеркальных стёкол при флоат-способе изготовления; повышения прозрачности; придания термоустойчивости',
+            imageUrl: 'page-1_img01.jpg' 
+        },
+        {
+            title: 'ПВХ изделия', 
+            description: 'При производстве стекла карбонатный наполнитель добавляют в шихту для: повышения температуры плавления шихты, снижая затраты на енергоносители; улучшения качества зеркальных стёкол при флоат-способе изготовления; повышения прозрачности; придания термоустойчивости', 
+            imageUrl: 'page-1_img02.jpg' 
+        }
+    ],
     uses: [
         {
             title: 'Оконный профиль', 
@@ -51,9 +63,18 @@
   
   <%= _.template(require('./../includes/intro.html'))(data)%>
   <div class="container-fluid content">
-      <%= _.template(require('./../includes/uses-list.html'))(data) %>
       <%= _.template(require('./../includes/points.html'))(data) %>
-    
+      <div class="container">
+          <h2>Наша продлукция</h2>
+          <div class="row">
+              <div class="col-md-8">
+                    <%= _.template(require('./../includes/products-list.html'))(data) %>
+              </div>
+              <div class="col-md-4">
+                  О компании
+              </div>
+          </div>
+      </div>
+      <%= _.template(require('./../includes/uses-list.html'))(data) %>
       <%= _.template(require('./../includes/footer.html'))(data) %>
-
   </div>
