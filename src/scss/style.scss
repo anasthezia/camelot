@@ -1,5 +1,6 @@
 @import "~bootstrap/scss/bootstrap";
 @import "./vars.scss";
+@import "./intro.scss";
 @import "./points.scss";
 @import "./uses.scss";
 
@@ -7,4 +8,8 @@
 
 body {
 //  background: $bg-color;
+}
+.content {
+    background: #ffffff;
+    padding: 80px 0
 }

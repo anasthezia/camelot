@@ -1,0 +1,26 @@
+.intro {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    &__bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -1000;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+    }
+    &__content {
+
+    }
+    &__title {
+        font-size: 48px;
+        color: #ffffff;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin: 120px;
+    }
+}
