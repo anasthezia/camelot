@@ -1,10 +1,12 @@
-.points {
+@import "vars.scss";
 
-}
+.points { }
+
 .point {
     text-align: center;
-    .counter {
+    &__value {
         font-size: 40px;
+        color: $blue;
     }
     &__title {
         max-width: 150px;

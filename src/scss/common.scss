@@ -1,0 +1,89 @@
+@import "./vars.scss";
+
+
+
+
+body {}
+.content {
+    background: white;
+    padding: 80px 0
+}
+.secion-title {
+    text-align: center;
+    font-size: 40px;
+    margin: 40px 0;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.thumb {
+    margin-bottom: 40px;
+    overflow: hidden;
+    position: relative;
+
+    &__text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(180deg, transparent 80%, rgba(0, 0, 0, 0.65) 100%);
+        transition: background .8s;
+    }
+
+    &__title {
+        position: absolute;
+        top: calc(100% - 80px);
+        transition: top .5s;
+        position: relative;
+        min-height: 80px;
+        bottom: 0;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 700;
+        padding: 10px 40px 20px 48px;
+        &:before {
+            content: '';
+            position: absolute;
+            height: 40px;
+            width: 3px;
+            top: 0;
+            left: 32px;
+            background: $blue;
+        }
+    }
+    &__description {
+        position: absolute;
+        top: 100%;
+        color: #fff;
+        padding: 0 40px;
+        font-size: 12px;
+        opacity: 0;
+        transition: top ease-in-out 1.2s, opacity  0.2s;
+    }
+
+    &__image {
+        overflow: hidden;
+        position: relative;
+    }
+    &__image img {
+        transition: all 1.5s;
+        width: 100%;
+
+    }
+ 
+    &:hover &__text {
+        background: rgba(0, 0, 0, 0.5);
+    }
+    &:hover &__title {
+        top: 40px;
+    }
+    &:hover &__description {
+        top: 92px;
+        opacity: 1;
+    }
+
+    &:hover &__image img {
+        transform: scale(1.1)
+    }
+}
